@@ -26,6 +26,8 @@
 
 .menu-links a {
     text-decoration: none;
+    font-family: 'Open Sans';
+    color: #6f6f6f;
     margin-right: 1.5em;
     margin-left: 1.5em;
 }
@@ -68,10 +70,12 @@ footer {
 
 body h1, h2, h3 {
     color: #333333;
+    font-family: 'Raleway';
 }
 
 body p {
     color: #858585;
+    font-family: 'Open Sans';
 }
 
 .logo-img {
@@ -89,6 +93,7 @@ body p {
     text-align: center;
     border-radius: 10px;
     color: #629dba;
+    font-family: 'Open Sans';
 }
 
 .contact-btn:hover {
@@ -109,6 +114,7 @@ body p {
     border-radius: 10px;
     background: #629dba;
     color: #fff;
+    font-family: 'Open Sans';
 }
 
 .decouvrir-btn:hover {
