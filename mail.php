@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Marine Merveillie RP - Contact</title>
+        <title>Marine Merveillie RP attachée de presse freelance</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://kit.fontawesome.com/570318d29a.js" crossorigin="anonymous"></script>
@@ -53,44 +53,9 @@
             </div>
         </header>
 
-        <div class="form-container">
-            <h1>
-                CONTACTEZ-MOI :
-            </h1>
-                <div class="form-content">
-                    <form action="mail.php" method="post">
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1">Nom* :</label>
-                            <br>
-                            <input type="text" class="form-control" id="FormName" name="nom" placeholder="Votre nom" required pattern="[a-zA-Z0-9_]{3,16}$" maxlength="30">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlSelect1">Prénom :</label>
-                            <br>
-                            <input type="text" class="form-control" id="FormSurname" name="prenom" placeholder="Votre prénom" pattern="[a-zA-Z0-9_]{3,16}$" maxlength="30">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1">Email* :</label>
-                            <br>
-                            <input type="email" class="form-control" id="FormMail" name="email" placeholder="nom@mail.fr" required pattern="[^\W][a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*\@[a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*\.[a-zA-Z]{2,4}$">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlInput1">Téléphone :</label>
-                            <br>
-                            <input type="tel" class="form-control" id="FormPhone" name="phone" placeholder="06 00 00 00 00" pattern="^(0|\+33)[1-9]([-. ]?[0-9]{2}){4}$">
-                        </div>
-                        <div class="form-group green-border-focus">
-                            <label for="exampleFormControlTextarea1">Votre message* :</label>
-                            <br>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" name="message" rows="3" required maxlength="10000"></textarea>
-                        </div>
-                        <div class="g-recaptcha" data-sitekey="6Lcei-gZAAAAABIQf5VDgzk_OlhdGgx5YE-BEYRE"></div>
-                        <br>
-                        <div class="div-cta">
-                            <button type="submit" class="decouvrir-btn">Envoyer votre demande</button>
-                        </div> 
-                    </form>
-                </div>
+        <div class="intro">
+            <h1>Votre message a bien été envoyé</h1>
+            <p>Je reviendrais vers vous rapidemment</p>  
         </div>
         <footer>
             <p>
@@ -107,7 +72,26 @@
             </p>
         </footer>
     </body>
-    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
-    async defer>
-    </script>
 </html>
+<?php
+require 'recaptcha.php';
+
+$to      = 'marine-merveillie@gmail.com';
+$subject = 'Nouveau message du formulaire de contact marine-merveillie.com';
+$prenom = htmlspecialchars($_POST['prenom']);
+$nom = htmlspecialchars($_POST['nom']);
+$telephone = htmlspecialchars($_POST['phone']);
+$message = "Message de : \n $prenom \n $nom \n $telephone \n \n" . htmlspecialchars($_POST['message']);
+$sender = htmlspecialchars($_POST['email']);
+$headers = "From: $sender" . "\r\n" .
+    'Reply-To: $sender' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+
+    if (!empty($_POST)) {
+        $captcha = new Recaptcha('6Lcei-gZAAAAADjAi--GlUvpJ_cj5T33Nrz0IUeN');
+        if($captcha->isValid($_POST['g-recaptcha-response']) === true) {
+            mail(htmlspecialchars($to), htmlspecialchars($subject), htmlspecialchars($message), htmlspecialchars($headers));
+        }
+    }    
+
+?>

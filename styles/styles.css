@@ -128,3 +128,38 @@ body p {
     text-align: center;
     margin: 0.5em;
 }
+
+/*CONTACT FORM */
+
+.form-container {
+    padding: 4em;
+    display: inline;
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'Open Sans';
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-content {
+    text-align: justify;
+    padding-left: 2em;
+    background-color: #629dba;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    margin: 0 auto;
+    width: 40%;
+    border-radius: 5px;
+}
+
+.div-cta {
+    text-align: center;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+
