@@ -9,7 +9,7 @@ class Recaptcha
             return false; // Si aucun code n'est entré, on ne cherche pas plus loin
         }
         $params = [
-            'secret'    => '6Lcei-gZAAAAADjAi--GlUvpJ_cj5T33Nrz0IUeN',
+            'secret'    => '',
             'response'  => $code
         ];
 
