@@ -66,6 +66,74 @@ footer {
     margin: 1em;
 }
 
+/* ACCOMPAGNEMENT & EXPERTISE */
+
+.intro-accompagnement, .intro-expertise {
+    text-align: center;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    margin-left: 10em;
+    margin-right: 10em;
+}
+
+/* .contenu-accompagnement h2, .contenu-expertise h2, .icon-expertise, .icon-accompagnement  {
+    text-align: center;
+} */
+
+.icon-expertise, .icon-accompagnement {
+    color: #629dba;
+}
+
+.contenu-accompagnement, .contenu-expertise {
+    margin-left: 10em;
+    margin-right: 10em;
+}
+
+.contenu-accompagnement li, .contenu-expertise li {
+    color: #858585;
+    font-family: 'Open Sans';
+}
+
+.cta-accompagnement, .cta-expertise, .div-cta {
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+/*CONTACT FORM */
+
+.form-container {
+    padding: 4em;
+    display: inline;
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'Open Sans';
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-content {
+    text-align: justify;
+    padding-left: 2em;
+    background-color: #629dba;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    margin: 0 auto;
+    width: 40%;
+    border-radius: 5px;
+}
+
+.div-cta {
+    text-align: center;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+
 /* FONTS, IMG & LINKS */
 
 body h1, h2, h3 {
@@ -127,39 +195,5 @@ body p {
     color: #fff;
     text-align: center;
     margin: 0.5em;
-}
-
-/*CONTACT FORM */
-
-.form-container {
-    padding: 4em;
-    display: inline;
-    text-align: center;
-    margin: 0 auto;
-    font-family: 'Open Sans';
-}
-
-.form-group {
-    margin-bottom: 1rem;
-}
-
-.form-content {
-    text-align: justify;
-    padding-left: 2em;
-    background-color: #629dba;
-    padding-top: 2em;
-    padding-bottom: 2em;
-    margin: 0 auto;
-    width: 40%;
-    border-radius: 5px;
-}
-
-.div-cta {
-    text-align: center;
-}
-
-label {
-    display: inline-block;
-    margin-bottom: .5rem;
 }
 
