@@ -100,6 +100,59 @@ footer {
     padding-bottom: 1em;
 }
 
+/* REFERENCES */
+
+.client-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.client-logo {
+    width: 10em;
+}
+
+.client-card {
+    width: 25em;
+    border: 1px solid #e8e8e8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 2px;
+}
+
+/* ABOUT */ 
+
+.about-intro {
+    text-align: center;
+    padding-top: 4em;
+    padding-left: 4em;
+    padding-right: 4em;
+    padding-bottom: 2em;
+}
+
+.portrait-about {
+    width: 15em;
+    height: auto;
+    border-radius: 5%;
+    margin-right: 3em;
+}
+
+.about-content {
+    border-radius: 1%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+    padding: 2em;
+}
+
+.about-twitter { 
+    text-align: center;
+}
+
 /*CONTACT FORM */
 
 .form-container {
