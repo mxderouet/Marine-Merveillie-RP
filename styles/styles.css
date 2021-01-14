@@ -1,7 +1,7 @@
 /* MAIN, BODY & FOOTER */
 
 .main {
-    margin: auto 6em;
+    margin: auto 12em;
 }
 
 .menu {
@@ -9,7 +9,16 @@
     margin-bottom: 1em;
     padding-top: 1em;
     padding-bottom: 1em;
-    border-bottom: solid 1px grey;
+    /* border-bottom: solid 1px grey; */
+}
+
+.menu:after {
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    margin: 20px auto; /* This will center the border. */
+    padding-top: 10px;
+    width: 85%;
+    border-top: solid 1px grey;
 }
 
 .logo {
@@ -37,7 +46,25 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 30px;
+}
+
+footer:before {
+    content: ""; /* This is necessary for the pseudo element to work. */ 
+    display: block; /* This will put the pseudo element on its own line. */
+    width: 85%;
     border-top: solid 1px grey;
+}
+
+footer p {
+    font-size: small;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    font-family: 'Open Sans';
+    font-size: small;
 }
 
 /* INDEX */ 
@@ -98,6 +125,19 @@ footer {
     text-align: center;
     padding-top: 1em;
     padding-bottom: 1em;
+}
+
+.accompagnement-images, .expertise-images {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10em;
+    margin-right: 10em;
+    margin-bottom: 5em;
+}
+
+.accompagnement-logo, .expertise-logo {
+    width: 8em;
 }
 
 /* REFERENCES */
@@ -200,7 +240,7 @@ body p {
 }
 
 .logo-img {
-    width: 10em;
+    width: 9.5em;
 }
   
 .contact-btn {
