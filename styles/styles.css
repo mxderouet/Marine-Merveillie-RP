@@ -1,7 +1,8 @@
 /* MAIN, BODY & FOOTER */
 
 .main {
-    margin: auto 12em;
+    margin: auto 20em;
+    line-height: 1.55556;
 }
 
 .menu {
@@ -71,7 +72,10 @@ footer a {
 
 .intro {
     text-align: center;
-    padding: 4em;
+    padding-top: 3em;
+    padding-bottom: 4em;
+    padding-right: 4em;
+    padding-left: 4em;
 }
 
 .intro-txt {
@@ -97,7 +101,7 @@ footer a {
 
 .intro-accompagnement, .intro-expertise {
     text-align: center;
-    padding-top: 4em;
+    padding-top: 3em;
     padding-bottom: 4em;
     margin-left: 10em;
     margin-right: 10em;
@@ -149,24 +153,27 @@ footer a {
 }
 
 .client-logo {
-    width: 10em;
+    height: 7em;
 }
 
 .client-card {
+    padding: 5px;
     width: 25em;
-    border: 1px solid #e8e8e8;
+    border: 0.5px solid white;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 2px;
+    margin: 20px;
+    flex-basis: 29%;
+    border-radius: 15px;
 }
 
 /* ABOUT */ 
 
 .about-intro {
     text-align: center;
-    padding-top: 4em;
+    padding-top: em;
     padding-left: 4em;
     padding-right: 4em;
     padding-bottom: 2em;
@@ -193,7 +200,15 @@ footer a {
     text-align: center;
 }
 
+.about-intro {
+    padding-top: 3em;
+}
+
 /*CONTACT FORM */
+
+.form-intro {
+    padding-top: 2em;
+}
 
 .form-container {
     padding: 4em;
@@ -212,10 +227,19 @@ footer a {
     padding-left: 2em;
     background-color: #629dba;
     padding-top: 2em;
-    padding-bottom: 2em;
     margin: 0 auto;
     width: 40%;
     border-radius: 5px;
+}
+
+.form-container input, textarea {
+    border: 2px solid lightblue;
+    border-radius: 4px;
+    height: 3em;
+    width: 93%;
+    font-family: 'Open Sans';
+    font-style: normal;
+    padding-left: 1em;
 }
 
 .div-cta {
@@ -288,5 +312,6 @@ body p {
     color: #fff;
     text-align: center;
     margin: 0.5em;
+    padding-bottom: 1.5em;;
 }
 
