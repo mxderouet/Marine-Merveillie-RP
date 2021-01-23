@@ -1,8 +1,20 @@
 /* MAIN, BODY & FOOTER */
 
 .main {
-    margin: auto 20em;
+    margin: auto 10em;
     line-height: 1.55556;
+}
+
+@media (max-width: 1150px) {
+    .main {
+        margin: auto 2em;
+    }
+}
+
+@media (max-width: 640px) {
+    .main {
+        margin: auto 0;
+    }
 }
 
 .menu {
@@ -10,7 +22,6 @@
     margin-bottom: 1em;
     padding-top: 1em;
     padding-bottom: 1em;
-    /* border-bottom: solid 1px grey; */
 }
 
 .menu:after {
@@ -18,7 +29,7 @@
     display: block; /* This will put the pseudo element on its own line. */
     margin: 20px auto; /* This will center the border. */
     padding-top: 10px;
-    width: 85%;
+    width: 65%;
     border-top: solid 1px grey;
 }
 
@@ -34,12 +45,26 @@
     justify-content: center;
 }
 
+@media (max-width: 640px) {
+    .menu-links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 .menu-links a {
     text-decoration: none;
     font-family: 'Open Sans';
     color: #6f6f6f;
     margin-right: 1.5em;
     margin-left: 1.5em;
+}
+
+@media (max-width: 1150px) {
+    .menu-links a {
+        margin-right: 1em;
+        margin-left: 1em;
+    }
 }
 
 footer {
@@ -53,7 +78,7 @@ footer {
 footer:before {
     content: ""; /* This is necessary for the pseudo element to work. */ 
     display: block; /* This will put the pseudo element on its own line. */
-    width: 85%;
+    width: 65%;
     border-top: solid 1px grey;
 }
 
@@ -66,6 +91,11 @@ footer a {
     text-decoration: none;
     font-family: 'Open Sans';
     font-size: small;
+    color: #4393bb;
+}
+
+footer a:hover {
+    color: #444343;
 }
 
 /* INDEX */ 
@@ -74,13 +104,25 @@ footer a {
     text-align: center;
     padding-top: 3em;
     padding-bottom: 2em;
-    padding-right: 10em;
-    padding-left: 10em;
+    padding-right: 1em;
+    padding-left: 1em;
 }
 
 .contenu {
     margin-left: 10em;
     margin-right: 10em;
+}
+
+@media (max-width: 1150px) {
+    .contenu {
+        margin: auto 3em;
+    }
+}
+
+@media (max-width: 640px) {
+    .contenu {
+        margin: auto 1em;
+    }
 }
 
 .intro-txt {
@@ -93,6 +135,21 @@ footer a {
     margin-left: 5em;
     margin-right: 5em;
     padding-top: 2em;
+}
+
+@media (max-width: 1150px) {
+    .cards {
+        margin-left: 0em;
+        margin-right: 0em;
+    }
+}
+
+@media (max-width: 950px) {
+    .cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .card {
@@ -112,13 +169,16 @@ footer a {
     text-align: center;
     padding-top: 3em;
     padding-bottom: 4em;
-    margin-left: 10em;
-    margin-right: 10em;
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
-/* .contenu-accompagnement h2, .contenu-expertise h2, .icon-expertise, .icon-accompagnement  {
-    text-align: center;
-} */
+@media (max-width: 1150px) {
+    .intro-accompagnement, .intro-expertise {
+        margin-left: 0em;
+        margin-right: 0em;
+    }
+}
 
 .icon-expertise, .icon-accompagnement {
     color: #629dba;
@@ -127,6 +187,18 @@ footer a {
 .contenu-accompagnement, .contenu-expertise {
     margin-left: 10em;
     margin-right: 10em;
+}
+
+@media (max-width: 1150px) {
+    .contenu-accompagnement, .contenu-expertise {
+        margin: auto 3em;
+    }
+}
+
+@media (max-width: 640px) {
+    .contenu-accompagnement, .contenu-expertise {
+        margin: auto 1em;
+    }
 }
 
 .contenu-accompagnement li, .contenu-expertise li {
@@ -147,6 +219,21 @@ footer a {
     margin-left: 10em;
     margin-right: 10em;
     margin-bottom: 5em;
+}
+
+@media (max-width: 1150px) {
+    .accompagnement-images, .expertise-images {
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex-basis: 30%;
+    }
+}
+
+@media (max-width: 640px) {
+    .accompagnement-images, .expertise-images {
+        flex-direction: column;
+        flex-basis: 90%;
+    }
 }
 
 .accompagnement-logo, .expertise-logo {
@@ -174,15 +261,27 @@ footer a {
     align-items: center;
     text-align: center;
     margin: 20px;
-    flex-basis: 29%;
+    flex-basis: 28%;
     border-radius: 15px;
+}
+
+@media (max-width: 1315px) {
+    .client-card {
+        flex-basis: 40%;
+    }
+}
+
+@media (max-width: 640px) {
+    .client-card {
+        flex-basis: 90%;
+    }
 }
 
 /* ABOUT */ 
 
 .about-intro {
     text-align: center;
-    padding-top: em;
+    padding-top: 3em;
     padding-left: 4em;
     padding-right: 4em;
     padding-bottom: 2em;
@@ -203,6 +302,12 @@ footer a {
     justify-content: space-between;
     text-align: left;
     padding: 2em;
+}
+
+@media (max-width: 640px) {
+    .about-content {
+        flex-direction: column;
+    }
 }
 
 .about-twitter { 
@@ -227,6 +332,20 @@ footer a {
     font-family: 'Open Sans';
 }
 
+@media (max-width: 1150px) {
+    .form-container {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+}
+
+@media (max-width: 640px) {
+    .form-container {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+}
+
 .form-group {
     margin-bottom: 1rem;
 }
@@ -241,6 +360,18 @@ footer a {
     border-radius: 5px;
 }
 
+@media (max-width: 1150px) {
+    .form-content {
+        width: 60%;
+    }
+}
+
+@media (max-width: 640px) {
+    .form-content {
+        width: 80%;
+    }
+}
+
 .form-container input, textarea {
     border: 2px solid lightblue;
     border-radius: 4px;
@@ -249,6 +380,12 @@ footer a {
     font-family: 'Open Sans';
     font-style: normal;
     padding-left: 1em;
+}
+
+@media (max-width: 640px) {
+    .form-container input, textarea {
+        width: 85%;
+    }
 }
 
 .div-cta {

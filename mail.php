@@ -14,6 +14,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap" rel="stylesheet">   
         <link rel="stylesheet" href="./styles/styles.css">
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <link rel="icon" type="image/jpg" href="/assets/favicon.ico">
     </head>
     <body>
         <!--[if lt IE 7]>
