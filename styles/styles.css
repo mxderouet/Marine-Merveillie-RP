@@ -102,7 +102,6 @@ footer a:hover {
 
 .intro {
     text-align: center;
-    padding-top: 3em;
     padding-bottom: 2em;
     padding-right: 1em;
     padding-left: 1em;
@@ -167,7 +166,6 @@ footer a:hover {
 
 .intro-accompagnement, .intro-expertise {
     text-align: center;
-    padding-top: 3em;
     padding-bottom: 4em;
     margin-left: 1em;
     margin-right: 1em;
@@ -252,6 +250,10 @@ footer a:hover {
     height: 7em;
 }
 
+.client-logo-va {
+    height: 6em;
+}
+
 .client-card {
     padding: 5px;
     width: 25em;
@@ -281,7 +283,6 @@ footer a:hover {
 
 .about-intro {
     text-align: center;
-    padding-top: 3em;
     padding-left: 4em;
     padding-right: 4em;
     padding-bottom: 2em;
@@ -314,18 +315,9 @@ footer a:hover {
     text-align: center;
 }
 
-.about-intro {
-    padding-top: 3em;
-}
-
 /*CONTACT FORM */
 
-.form-intro {
-    padding-top: 2em;
-}
-
 .form-container {
-    padding: 4em;
     display: inline;
     text-align: center;
     margin: 0 auto;
