@@ -29,7 +29,7 @@
     display: block; /* This will put the pseudo element on its own line. */
     margin: 20px auto; /* This will center the border. */
     padding-top: 10px;
-    width: 65%;
+    width: 70%;
     border-top: solid 1px grey;
 }
 
@@ -78,7 +78,7 @@ footer {
 footer:before {
     content: ""; /* This is necessary for the pseudo element to work. */ 
     display: block; /* This will put the pseudo element on its own line. */
-    width: 65%;
+    width: 70%;
     border-top: solid 1px grey;
 }
 
@@ -103,8 +103,8 @@ footer a:hover {
 .intro {
     text-align: center;
     padding-bottom: 2em;
-    padding-right: 1em;
-    padding-left: 1em;
+    padding-right: 3em;
+    padding-left: 3em;
 }
 
 .contenu {
@@ -167,8 +167,8 @@ footer a:hover {
 .intro-accompagnement, .intro-expertise {
     text-align: center;
     padding-bottom: 4em;
-    margin-left: 1em;
-    margin-right: 1em;
+    margin-left: 3em;
+    margin-right: 3em;
 }
 
 @media (max-width: 1150px) {
@@ -283,8 +283,8 @@ footer a:hover {
 
 .about-intro {
     text-align: center;
-    padding-left: 4em;
-    padding-right: 4em;
+    padding-left: 3em;
+    padding-right: 3em;
     padding-bottom: 2em;
 }
 
