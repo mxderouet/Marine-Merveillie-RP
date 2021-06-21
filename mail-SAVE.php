@@ -13,7 +13,6 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap" rel="stylesheet">   
         <link rel="stylesheet" href="./styles/styles.css">
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
         <link rel="icon" type="image/jpg" href="/assets/favicon.ico">
     </head>
     <body>
@@ -75,6 +74,7 @@
     </body>
 </html>
 <?php
+require 'recaptcha.php';
 
 $to      = 'mxderouet@gmail.com';
 $subject = 'Nouveau message du formulaire de contact marine-merveillie.com';
@@ -86,12 +86,12 @@ $sender = htmlspecialchars($_POST['email']);
 $headers = "From: $sender" . "\r\n" .
     'Reply-To: $sender' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
-    
+
     if (!empty($_POST)) {
-        $captcha = new Recaptcha('6LeljuUUAAAAAAtO3D0JC5NDklsLY6LLzBEP4pC9');
+        $captcha = new Recaptcha('6Lcei-gZAAAAADjAi--GlUvpJ_cj5T33Nrz0IUeN');
         if($captcha->isValid($_POST['g-recaptcha-response']) === true) {
             mail(htmlspecialchars($to), htmlspecialchars($subject), htmlspecialchars($message), htmlspecialchars($headers));
         }
-    }      
+    }    
 
-?>
+?>	

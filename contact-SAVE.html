@@ -14,20 +14,6 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap" rel="stylesheet">   
         <link rel="stylesheet" href="./styles/styles.css">
         <link rel="icon" type="image/jpg" href="/assets/favicon.ico">
-        <script type="text/javascript">
-            var verifyCallback = function(response) {
-              alert(response);
-            };
-            var widgetId1;
-            var onloadCallback = function() {
-              // Renders the HTML element with id 'example1' as a reCAPTCHA widget.
-              // The id of the reCAPTCHA widget is assigned to 'widgetId1'.
-              widgetId1 = grecaptcha.render('example1', {
-                'sitekey' : '6Lcei-gZAAAAABIQf5VDgzk_OlhdGgx5YE-BEYRE',
-                'theme' : 'light'
-              });
-            };
-          </script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -82,8 +68,7 @@
                     CONTACTEZ-MOI :
                 </h1>
                     <div class="form-content">
-                        <form action="mail.php" 
-                        enctype="text/plain" method="POST">
+                        <form action="mail.php" method="post">
                             <div class="form-group">
                                 <label for="exampleFormControlInput1">Nom* :</label>
                                 <br>
@@ -109,15 +94,12 @@
                                 <br>
                                 <textarea class="form-control" id="exampleFormControlTextarea1" name="message" rows="3" required maxlength="10000"></textarea>
                             </div>
-                            <div id="example1"></div>
+                            <div class="g-recaptcha" data-sitekey="6Lcei-gZAAAAABIQf5VDgzk_OlhdGgx5YE-BEYRE"></div>
                             <br>
                             <div class="div-cta">
                                 <button type="submit" class="decouvrir-btn">Envoyer votre demande</button>
                             </div> 
                         </form>
-                        <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
-                        async defer>
-                        </script>
                     </div>
             </div>
         </div>
@@ -135,7 +117,7 @@
             </p>
         </footer>
     </body>
-    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+    <script src="https://www.google.com/recaptcha/api.js?render=explicit"
     async defer>
     </script>
 </html>
